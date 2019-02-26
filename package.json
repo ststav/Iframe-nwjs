@@ -2,10 +2,10 @@
   "name": "node-webkit-webpack-starter",
   "version": "1.0.0",
   "description": "node-webkit-webpack-starter",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "node build/server.js",
-    "dev": "node build/server.js",
+    "dev": "node build/build.js && nw ./dist/ ",
     "build": "node build/build.js"
   },
   "repository": {
@@ -22,6 +22,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jarden-liu/node-webkit-webpack-starter/issues"
+  },
+  "window": {
+    "toolbar": true,
+    "show": true
   },
   "homepage": "https://github.com/jarden-liu/node-webkit-webpack-starter#readme",
   "devDependencies": {
@@ -59,6 +63,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.18.10",
     "ora": "^1.2.0",
     "proxy-middleware": "^0.15.0",
     "q": "^1.5.0",
@@ -73,5 +78,8 @@
     "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "nw": "^0.36.2"
   }
 }
